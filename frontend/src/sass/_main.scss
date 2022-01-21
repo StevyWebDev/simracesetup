@@ -1,0 +1,18 @@
+@import './partials/admin';
+@import './partials/formUser';
+@import './partials/allSaison';
+@import './partials/circuitBySaison';
+@import './partials/setups';
+
+main {
+  width: 80%;
+  margin: auto;
+
+  .block__title {
+    width: 100%;
+
+    h2 {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import './sass/svg';
+@import './sass/font';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(59, 59, 59);
+  color: aliceblue;
+  font-family: $heebo;
+}
+
+@import './sass/header';
+@import './sass/main';
+
+

@@ -1,0 +1,144 @@
+.range__custom {
+  margin: auto;
+  -webkit-appearance: none;
+  position: relative;
+  overflow: hidden;
+  height: 20px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 0; /* iOS */
+
+  &::-webkit-slider-runnable-track {
+    background: rgb(120, 120, 120);
+  }
+
+  /*
+   * 1. Set to 0 width and remove border for a slider without a thumb
+   */
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px; /* 1 */
+    height: 20px;
+    background: rgb(100, 100, 100);
+    box-shadow: -100vw 0 0 100vw red;
+    border: 2px solid rgb(80, 80, 80); /* 1 */
+    box-sizing: border-box;
+  }
+
+  &::-moz-range-track {
+    height: 20px;
+    background: rgb(120, 120, 120);
+  }
+
+  &::-moz-range-thumb {
+    width: 10px; /* 1 */
+    height: 20px;
+    background: rgb(100, 100, 100);
+    box-shadow: -100vw 0 0 100vw red;
+    border: 2px solid rgb(80, 80, 80);
+    box-sizing: border-box;
+    border-radius: 0;
+  }
+
+  &::-ms-fill-lower {
+    background: red;
+  }
+
+  &::-ms-thumb {
+    background: rgb(100, 100, 100);
+    border: 2px solid rgb(80, 80, 80);
+    height: 20px;
+    width: 10px;
+    box-sizing: border-box;
+  }
+
+  &::-ms-ticks-after {
+    display: none;
+  }
+
+  &::-ms-ticks-before {
+    display: none;
+  }
+
+  &::-ms-track {
+    background: rgb(120, 120, 120);
+    color: transparent;
+    height: 40px;
+    border: none;
+  }
+
+  &::-ms-tooltip {
+    display: none;
+  }
+}
+
+.range__custom__disabled {
+  margin: auto;
+  -webkit-appearance: none;
+  position: relative;
+  overflow: hidden;
+  height: 20px;
+  width: 100%;
+  border-radius: 0; /* iOS */
+
+  &::-webkit-slider-runnable-track {
+    background: rgb(120, 120, 120);
+  }
+
+  /*
+   * 1. Set to 0 width and remove border for a slider without a thumb
+   */
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px; /* 1 */
+    height: 20px;
+    background: red;
+    box-shadow: -100vw 0 0 100vw red;
+  }
+
+  &::-moz-range-track {
+    height: 20px;
+    background: rgb(120, 120, 120);
+  }
+
+  &::-moz-range-thumb {
+    width: 10px; /* 1 */
+    height: 20px;
+    background: rgb(100, 100, 100);
+    box-shadow: -100vw 0 0 100vw red;
+    border: 2px solid rgb(80, 80, 80);
+    box-sizing: border-box;
+    border-radius: 0;
+  }
+
+  &::-ms-fill-lower {
+    background: red;
+  }
+
+  &::-ms-thumb {
+    background: rgb(100, 100, 100);
+    border: 2px solid rgb(80, 80, 80);
+    height: 20px;
+    width: 10px;
+    box-sizing: border-box;
+  }
+
+  &::-ms-ticks-after {
+    display: none;
+  }
+
+  &::-ms-ticks-before {
+    display: none;
+  }
+
+  &::-ms-track {
+    background: rgb(120, 120, 120);
+    color: transparent;
+    height: 40px;
+    border: none;
+  }
+
+  &::-ms-tooltip {
+    display: none;
+  }
+}

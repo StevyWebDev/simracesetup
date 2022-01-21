@@ -1,0 +1,13 @@
+.block__config {
+    position: absolute;
+    z-index: 10;
+    background-color: rgb(66, 66, 66);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    form .tab__no__active {
+        display: none;
+    }   
+}

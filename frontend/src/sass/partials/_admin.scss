@@ -1,0 +1,311 @@
+.main__admin {
+  @import './blockUpdateSaison';
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 5px;
+
+  .overlay {
+    position: fixed;
+    background-color: rgba(165, 168, 167, 0.54);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 15;
+  }
+
+  .block__button {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 50px;
+    width: 100%;
+
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .button {
+      display: block;
+      cursor: pointer;
+      width: 100%;
+      padding: 10px 0;
+      text-align: center;
+      border-radius: 3px;
+      color: aliceblue;
+
+      @media screen and (min-width: 1200px) {
+        width: 25%;
+      }
+    }
+
+    .button__primary {
+      background-color: rgb(94, 93, 93);
+      border: 1px solid rgb(119, 119, 119);
+      font-family: $heebo;
+
+      &:hover {
+        background-color: rgb(109, 108, 108);
+        border: 1px solid rgb(95, 95, 95);
+      }
+    }
+
+    .button__secondary {
+      background-color: rgb(151, 27, 27);
+      border: 1px solid rgb(187, 33, 33);
+
+      &:hover {
+        background-color: rgb(187, 33, 33);
+        border: 1px solid rgb(151, 27, 27);
+      }
+    }
+  }
+
+  .block__confirm {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(51, 51, 51);
+    height: 100%;
+    width: 100%;
+    z-index: 15;
+
+    p {
+      text-align: center;
+      padding: 10px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      top: 40%;
+      left: 25%;
+      height: 20%;
+      width: 50%;
+    }
+  }
+
+  @media screen and (min-width: 1300px) {
+    flex-direction: row;
+  }
+
+  .table.admin {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+
+    .line {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      text-align: center;
+    }
+
+    .line.circuit div {
+      &:first-child, &:nth-child(2) {
+        width: 25%;
+      }
+
+      &:nth-child(3) {
+        width: 20%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      &:nth-child(4), &:last-child {
+        width: 15%;
+        text-align: center;
+
+        .icon {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .icon {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+  }
+
+  .icon.delete {
+    background: $delete;
+    background-size: 100%;
+  }
+
+  .icon.update {
+    background: $update;
+    background-size: 100%
+  }
+
+  .column__admin {
+    width: 100%;
+    @media screen and (min-width: 1300px) {
+      width: calc(10% - 2.5px);
+    }
+
+    nav {
+      ul {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        @media screen and (min-width: 1300px) {
+          flex-direction: column;
+        }
+
+        .items__tasks {
+          list-style: none;
+          cursor: pointer;
+          @media screen and (min-width: 1300px) {
+            padding: 10px 5px;
+          }
+        }
+
+        .tab__no__active {
+          &:hover {
+            //background: linear-gradient(to bottom right, rgb(165, 30, 30), 30%, rgb(80, 80, 80));
+            background-color: rgba(117, 117, 117, 0.178);
+          }
+        }
+
+        .tab__active {
+          background-color: rgb(151, 27, 27);
+        }
+      }
+    }
+  }
+
+  .container__admin {
+    width: 100%;
+    @media screen and (min-width: 1300px) {
+      width: calc(90% - 2.5px);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 10px;
+    }
+
+    .intput__file {
+      display: none;
+    }
+
+    .intput__file + label {
+      @media screen and (min-width: 1500px) {
+        font-size: 1rem;
+      }
+      display: inline-block;
+      background-color: rgb(173, 8, 8);
+      padding: 5px 3px;
+      border: 2px solid rgb(248, 93, 93);
+      color: white;
+      text-align: center;
+      font-size: 0.8rem;
+      cursor: pointer;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: rgb(204, 10, 10);
+        border: 2px solid rgb(248, 113, 113);
+      }
+
+      &::before {
+        content: ' ';
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
+        width: 20px;
+        height: 20px;
+        background-image: $upload;
+      }
+    }
+
+    .block__listSaison {
+      width: 100%;
+      border: 1px solid black;
+
+      .block__saison {
+        width: 100%;
+
+        .block__yearSaison {
+          width: 100%;
+          cursor: pointer;
+
+          @media screen and (min-width: 1300px) {
+            width: 50%;
+            margin: auto;
+          }
+
+          &:hover {
+            background-color: rgb(66, 66, 66);
+          }
+        }
+
+        .block__tasksList {
+          display: flex;
+          flex-direction: column;
+
+          .block__tasks {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 5px;
+            justify-content: center;
+
+            h4 {
+              display: inline-block;
+              width: 100%;
+            }
+
+            figure {
+              width: 10%;
+              background-color: rgb(80, 80, 80);
+
+              figcaption {
+                display: flex;
+                flex-direction: column;
+
+                span {
+                  display: inline-block;
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+
+      }
+    }
+
+    .block__formulaOne {
+      width: 100%;
+      border: 1px solid black;
+    }
+
+    .block__formulaTwo {
+      width: 100%;
+      border: 1px solid black;
+    }
+
+    .block__circuit {
+      width: 100%;
+      border: 1px solid black;
+    }
+
+    .block__entitySetup {
+      width: 100%;
+      border: 1px solid black;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+.header {
+    background: linear-gradient(to bottom right, rgb(151, 27, 27), 30%, rgb(59, 59, 59));
+    height: 30px;
+    @import './partials/buttonMenu';
+
+    @media screen and (min-width: 1200px) {
+        height: auto;
+    }
+
+    nav {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform: translateX(-100%);
+        transition: transform .5s ease-out;
+        background: linear-gradient(to bottom right, rgb(151, 27, 27), 20%, rgb(59, 59, 59), rgb(59, 59, 59));
+        z-index: 5;
+
+        @media screen and (min-width: 1200px) {
+            position: initial;
+            transform: translateX(0%);
+            background-color: transparent;
+        }
+
+        .block__nav__menu {
+            
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            height: 100%;
+            width: 100%;
+            padding: 10px;
+
+            @media screen and (min-width: 1200px) {
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: center;
+                padding: 0;
+            }
+
+            li {
+                list-style: none;
+
+                a, .button__nav {
+                    cursor: pointer;
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    text-decoration: none;
+                    color: white;
+                    width: 80%;
+                    padding: 10px 20px;
+
+                    @media screen and (min-width: 1200px) {
+                        padding: 20px 30px;
+                        width: 100%;
+                    }
+
+                    &:hover {
+                        //background: linear-gradient(to bottom right, rgb(165, 30, 30), 30%, rgb(80, 80, 80));
+                        background-color: rgba(117, 117, 117, 0.178);
+                    }
+                }
+            }
+        }
+    }
+    .block__active {
+        overflow-y: auto;
+        transform: translateX(0%);
+        transition: transform .5s ease-out;
+    }
+}
